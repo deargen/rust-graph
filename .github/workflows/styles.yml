@@ -1,0 +1,30 @@
+name: Style checking
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  ruff-format:
+    uses: deargen/workflows/.github/workflows/check-ruff.yml@master
+    with:
+      check-type: format
+      ruff-version-file: deps/lock/x86_64-unknown-linux-gnu/requirements_dev.txt
+  ruff-isort:
+    uses: deargen/workflows/.github/workflows/check-ruff.yml@master
+    with:
+      check-type: isort
+      ruff-version-file: deps/lock/x86_64-unknown-linux-gnu/requirements_dev.txt
+
+  rustfmt:
+    uses: deargen/workflows/.github/workflows/check-cargo.yml@master
+    with:
+      check-type: fmt
+      working-directory: rust

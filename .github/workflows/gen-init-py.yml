@@ -1,0 +1,19 @@
+name: Generate __init__.py files
+
+on:
+  workflow_dispatch:
+    inputs:
+      src-dir:
+        description: src directory
+        required: true
+        default: src
+
+jobs:
+  generate-init-py:
+    name: Generate __init__.py files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: deargen/workflows/actions/gen-init-py@master
+        with:
+          src-dir: ${{ github.event.inputs.src-dir }}

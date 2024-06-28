@@ -1,0 +1,3 @@
+def all_pairs_dijkstra_path_length(
+    weighted_edges: list[tuple[int, int, float]], /, cutoff: float | None
+) -> dict[int, dict[int, float]]: ...

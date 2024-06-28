@@ -1,0 +1,12 @@
+ruff==0.5.0
+pytest
+huggingface_hub
+toml
+maturin
+
+# test requirements
+rich
+numpy
+scipy
+trimesh
+networkx

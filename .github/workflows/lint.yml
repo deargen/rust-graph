@@ -1,0 +1,25 @@
+name: Linting
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  ruff-lint:
+    uses: deargen/workflows/.github/workflows/check-ruff.yml@master
+    with:
+      check-type: lint
+      ruff-version-file: deps/lock/x86_64-unknown-linux-gnu/requirements_dev.txt
+
+  clippy:
+    uses: deargen/workflows/.github/workflows/check-cargo.yml@master
+    with:
+      check-type: clippy
+      working-directory: rust
