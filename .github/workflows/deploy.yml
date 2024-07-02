@@ -1,4 +1,4 @@
-name: Commit CHANGELOG.md, create a Release and publish to PyPI
+name: Deploy a new version
 
 on:
   workflow_dispatch:
