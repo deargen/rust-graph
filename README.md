@@ -4,7 +4,6 @@
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/rust-graph)](https://pypi.python.org/pypi/rust-graph)
 [![image](https://img.shields.io/pypi/l/rust-graph.svg)](https://pypi.python.org/pypi/rust-graph)
 [![image](https://img.shields.io/pypi/pyversions/rust-graph.svg)](https://pypi.python.org/pypi/rust-graph)
-[![Actions status](https://github.com/deargen/rust-graph/workflows/Deploy%20a%20new%20version/badge.svg)](https://github.com/deargen/rust-graph/actions)
 
 |  |  |
 |--|--|
