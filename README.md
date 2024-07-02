@@ -13,6 +13,7 @@
 | [![pytest](https://img.shields.io/badge/pytest-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://github.com/pytest-dev/pytest) [![cargo test](https://img.shields.io/badge/cargo%20test-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)](https://doc.rust-lang.org/cargo/commands/cargo-test.html) | [![Actions status](https://github.com/deargen/rust-graph/workflows/Tests/badge.svg)](https://github.com/deargen/rust-graph/actions) |
 | [![uv](https://img.shields.io/badge/uv-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://github.com/astral-sh/uv) | [![Actions status](https://github.com/deargen/rust-graph/workflows/Check%20pip%20compile%20sync/badge.svg)](https://github.com/deargen/rust-graph/actions) |
 
+
 Graph algorithms implemented in Rust, available as a Python package. >10x faster than `networkx`.
 
 So far, there is only one function implemented: `all_pairs_dijkstra_path_length`. It's a re-write of the `networkx` function with the same name and should return the same results.
@@ -125,3 +126,4 @@ python3 tools/benchmark.py
 ### Compile requirements (generate lockfiles)
 
 Use GitHub Actions: `apply-pip-compile.yml`. Manually launch the workflow and it will make a commit with the updated lockfiles.
+
