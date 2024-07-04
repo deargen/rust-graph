@@ -13,4 +13,4 @@ jobs:
           pyproject-toml-file: pyproject.toml
           requirements-in-dir: deps
           requirements-out-dir: deps/lock
-          python-platforms: x86_64-unknown-linux-gnu,aarch64-apple-darwin,x86_64-apple-darwin,x86_64-pc-windows-msvc
+          python-platforms: x86_64-manylinux_2_28,aarch64-apple-darwin,x86_64-apple-darwin,x86_64-pc-windows-msvc
