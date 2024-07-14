@@ -17,7 +17,7 @@ jobs:
     uses: deargen/workflows/.github/workflows/commit-changelog-and-release.yml@master
     with:
       version-tag: ${{ github.event.inputs.version-tag }}
-      dry-run: ${{ github.event.inputs.dry-run == true }}
+      dry-run: ${{ github.event.inputs.dry-run == 'true' }}
       changelog-path: docs/CHANGELOG.md
       exclude-types: build,docs,style,other
 
