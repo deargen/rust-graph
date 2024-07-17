@@ -1,4 +1,4 @@
-# rust-graph
+# rust-graph: Dijkstra written in Rust
 
 [![image](https://img.shields.io/pypi/v/rust-graph.svg)](https://pypi.python.org/pypi/rust-graph)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/rust-graph)](https://pypi.python.org/pypi/rust-graph)
