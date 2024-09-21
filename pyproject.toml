@@ -124,19 +124,11 @@ banned-module-level-imports = ["torch", "tensorflow"]
 include = ["src"]
 
 typeCheckingMode = "standard"
-autoSearchPaths = true
 useLibraryCodeForTypes = true
 autoImportCompletions = true
-diagnosticsMode = "openFilesOnly"
-
-# reportUnusedImport = false
-# reportUnusedVariable = false
-# reportUnusedClass = "warning"
-# reportUnusedFunction = "warning"
-# reportUndefinedVariable = false  # ruff handles this with F821
 
 pythonVersion = "3.8"
-pythonPlatform = "Linux"
+# pythonPlatform = "Linux"
 
 [tool.coverage.report]
 omit = [
