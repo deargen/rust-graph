@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "rust-graph"
-requires-python = ">=3.8"
+requires-python = ">=3.8,<4"
 description = "Simple and fast graph operations written in Rust" # OPTIONALLY CHANGE
 authors = [
   { name = "Kiyoon Kim" }, # OPTIONALLY CHANGE
@@ -23,6 +23,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "License :: OSI Approved :: Apache Software License",
 ]
 dynamic = ["version"]

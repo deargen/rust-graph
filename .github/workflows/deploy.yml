@@ -27,17 +27,17 @@ jobs:
     strategy:
       matrix:
         platform:
-          - runner: ubuntu-latest
+          - runner: ubuntu-24.04
             target: x86_64
-          - runner: ubuntu-latest
+          - runner: ubuntu-24.04
             target: x86
-          - runner: ubuntu-latest
+          - runner: ubuntu-24.04
             target: aarch64
-          - runner: ubuntu-latest
+          - runner: ubuntu-24.04
             target: armv7
-          - runner: ubuntu-latest
+          - runner: ubuntu-24.04
             target: s390x
-          - runner: ubuntu-latest
+          - runner: ubuntu-24.04
             target: ppc64le
     steps:
       - uses: actions/checkout@v4
@@ -129,7 +129,7 @@ jobs:
           path: dist
 
   sdist:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -155,7 +155,7 @@ jobs:
   release:
     name: Release
     if: ${{ github.event.inputs.dry-run == 'false' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [linux, windows, macos, sdist, commit-changelog-and-release]
     steps:
       - uses: actions/download-artifact@v4

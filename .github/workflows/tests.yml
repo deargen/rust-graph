@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   pytest:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: deargen/workflows/actions/setup-python-and-uv@master
@@ -28,7 +28,7 @@ jobs:
         uses: deargen/workflows/actions/run-pytest@master
 
   cargo-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: Run cargo test
