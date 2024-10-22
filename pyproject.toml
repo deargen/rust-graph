@@ -31,6 +31,16 @@ dynamic = ["version"]
 [project.urls]
 "Homepage" = "https://github.com/deargen/rust-graph"
 
+[tool.pyright]
+include = ["src"]
+
+typeCheckingMode = "standard"
+useLibraryCodeForTypes = true
+autoImportCompletions = true
+
+pythonVersion = "3.8"
+# pythonPlatform = "Linux"
+
 [tool.maturin]
 features = ["pyo3/extension-module"]
 sdist-include = ["LICENSE", "README.md"]
@@ -38,9 +48,9 @@ sdist-include = ["LICENSE", "README.md"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
-
 [tool.ruff]
 src = ["src"]  # for ruff isort
+namespace-packages = ["tools", "scripts", "tests"]  # for INP rule, suppress on these directories
 extend-exclude = [
   "src/rust_graph/_version.py",  # CHANGE
   "scripts/update_version_in_cargo_toml.py",  # CHANGE
@@ -120,16 +130,6 @@ required-imports = [
 # that they're imported lazily (e.g., within a function definition, if TYPE_CHECKING, etc.)
 # NOTE: Ruff code TID is currently disabled, so this settings doesn't do anything.
 banned-module-level-imports = ["torch", "tensorflow"]
-
-[tool.pyright]
-include = ["src"]
-
-typeCheckingMode = "standard"
-useLibraryCodeForTypes = true
-autoImportCompletions = true
-
-pythonVersion = "3.8"
-# pythonPlatform = "Linux"
 
 [tool.coverage.report]
 omit = [
