@@ -246,6 +246,7 @@
 //     return dist
 
 use pyo3::prelude::*;
+use pyo3::types::PyDict;
 use rayon::prelude::*;
 use std::collections::{BinaryHeap, HashMap, HashSet};
 
@@ -392,12 +393,17 @@ impl Default for Graph {
 }
 
 #[pyfunction]
-fn all_pairs_dijkstra_path_length(edges: Vec<(u32, u32, f64)>, cutoff: Option<f64>) -> Py<PyAny> {
+#[pyo3(signature = (edges, cutoff=None))]
+fn all_pairs_dijkstra_path_length(
+    edges: Vec<(u32, u32, f64)>,
+    cutoff: Option<f64>,
+) -> PyResult<HashMap<u32, HashMap<u32, f64>>> {
     let mut graph = Graph::new();
     graph.add_weighted_edges_from(edges);
 
     let dist = graph.all_pairs_dijkstra_path_length(cutoff);
-    Python::with_gil(|py| dist.to_object(py))
+    //Python::with_gil(|py| dist.into_pyobject(py))
+    Ok(dist)
 }
 
 /// A Python module implemented in Rust.
