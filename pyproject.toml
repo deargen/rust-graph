@@ -31,6 +31,14 @@ dynamic = ["version"]
 [project.urls]
 "Homepage" = "https://github.com/deargen/rust-graph"
 
+[tool.projector.pip-compile]
+# https://github.com/deargen/workflows/blob/master/python-projector
+requirements-in-dir = "deps"
+requirements-out-dir = "deps/lock"
+python-platforms = ["x86_64-manylinux_2_28", "aarch64-apple-darwin", "x86_64-apple-darwin",
+  "x86_64-pc-windows-msvc",
+]
+
 [tool.pyright]
 include = ["src"]
 
