@@ -16,6 +16,11 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+      - name: Download test data
+        run: |
+          # Do this before setup python because huggingface_hub stopped supporting python 3.8
+          pip install huggingface_hub
+          python3 scripts/hf_download.py
       - uses: deargen/workflows/actions/setup-python-and-uv@master
       - name: Install dependencies
         run: |
@@ -23,7 +28,6 @@ jobs:
           source .venv/bin/activate
           uv pip install -r deps/lock/x86_64-manylinux_2_28/requirements_dev.txt
           bash scripts/install.sh
-          python3 scripts/hf_download.py
       - name: Run pytest
         uses: deargen/workflows/actions/run-pytest@master
 

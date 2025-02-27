@@ -246,7 +246,6 @@
 //     return dist
 
 use pyo3::prelude::*;
-use pyo3::types::PyDict;
 use rayon::prelude::*;
 use std::collections::{BinaryHeap, HashMap, HashSet};
 
