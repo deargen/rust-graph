@@ -5,10 +5,10 @@ edition = "2021"
 
 [lib]
 name = "rust_graph"
-crate-type = [ "cdylib", "rlib",]
+crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-pyo3 = "0.23.5"
+pyo3 = "0.24.0"
 rayon = "1.10"
 
 [features]

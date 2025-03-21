@@ -1,5 +1,5 @@
 [build-system]
-requires = ["maturin>=1.5,<2.0"]
+requires = ["maturin>=1.8,<2.0"]
 build-backend = "maturin"
 
 [project]
@@ -13,18 +13,18 @@ readme = "README.md"
 license = "Apache-2.0"
 
 classifiers = [
-    "Programming Language :: Rust",
-    "Programming Language :: Python :: Implementation :: CPython",
-    "Programming Language :: Python :: Implementation :: PyPy",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Rust",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "License :: OSI Approved :: Apache Software License",
 ]
 dynamic = ["version"]
 
@@ -35,7 +35,10 @@ dynamic = ["version"]
 # https://github.com/deargen/workflows/blob/master/python-projector
 requirements-in-dir = "deps"
 requirements-out-dir = "deps/lock"
-python-platforms = ["x86_64-manylinux_2_28", "aarch64-apple-darwin", "x86_64-apple-darwin",
+python-platforms = [
+  "x86_64-manylinux_2_28",
+  "aarch64-apple-darwin",
+  "x86_64-apple-darwin",
   "x86_64-pc-windows-msvc",
 ]
 
@@ -57,11 +60,15 @@ sdist-include = ["LICENSE", "README.md"]
 testpaths = ["tests"]
 
 [tool.ruff]
-src = ["src"]  # for ruff isort
-namespace-packages = ["tools", "scripts", "tests"]  # for INP rule, suppress on these directories
+src = ["src"] # for ruff isort
+namespace-packages = [
+  "tools",
+  "scripts",
+  "tests",
+] # for INP rule, suppress on these directories
 extend-exclude = [
-  "src/rust_graph/_version.py",  # CHANGE
-  "scripts/update_version_in_cargo_toml.py",  # CHANGE
+  "src/rust_graph/_version.py",              # CHANGE
+  "scripts/update_version_in_cargo_toml.py", # CHANGE
 ]
 
 [tool.ruff.lint]
@@ -71,49 +78,49 @@ select = [
   "E",
   "F",
   "W",
-  "B",    # Bugbear
-  "D",    # Docstring
-  "D213", # Multi-line docstring summary should start at the second line (replace D212)
-  "N",    # Naming
-  "C4",   # flake8-comprehensions
-  "UP",   # pyupgrade
-  "SIM",  # simplify
-  "RUF",  # ruff-specific
-  "RET501",  # return
-  "RET502",  # return
-  "RET503",  # return
-  "PTH",  # path
-  "NPY",  # numpy
-  "PYI",  # type stubs for pyright/pylance
-  "PT",   # pytest
-  "PIE",  #
-  "LOG",  # logging
-  "COM818",  # comma misplaced
-  "COM819",  # comma
-  "DTZ",  # datetime
+  "B",      # Bugbear
+  "D",      # Docstring
+  "D213",   # Multi-line docstring summary should start at the second line (replace D212)
+  "N",      # Naming
+  "C4",     # flake8-comprehensions
+  "UP",     # pyupgrade
+  "SIM",    # simplify
+  "RUF",    # ruff-specific
+  "RET501", # return
+  "RET502", # return
+  "RET503", # return
+  "PTH",    # path
+  "NPY",    # numpy
+  "PYI",    # type stubs for pyright/pylance
+  "PT",     # pytest
+  "PIE",    #
+  "LOG",    # logging
+  "COM818", # comma misplaced
+  "COM819", # comma
+  "DTZ",    # datetime
   "YTT",
   "ASYNC",
 
   # Not important
-  "T10",  # debug statements
-  "T20",  # print statements
+  "T10", # debug statements
+  "T20", # print statements
 ]
 
 ignore = [
-  "E402",    # Module level import not at top of file
-  "W293",    # Blank line contains whitespace
-  "W291",    # Trailing whitespace
-  "D10",     # Missing docstring in public module / function / etc.
-  "D200",    # One-line docstring should fit on one line with quotes
-  "D212",    # Multi-line docstring summary should start at the first line
-  "D417",    # require documentation for every function parameter.
-  "D401",    # require an imperative mood for all docstrings.
-  "PTH123",  # Path.open should be used instead of built-in open
-  "PT006",   # Pytest parameterize style
-  "N812",    # Lowercase `functional` imported as non-lowercase `F` (import torch.nn.functional as F)
-  "NPY002",  # legacy numpy random
-  "UP017",   # datetime.timezone.utc -> datetime.UTC
-  "SIM108",  # use ternary operator instead of if-else
+  "E402",   # Module level import not at top of file
+  "W293",   # Blank line contains whitespace
+  "W291",   # Trailing whitespace
+  "D10",    # Missing docstring in public module / function / etc.
+  "D200",   # One-line docstring should fit on one line with quotes
+  "D212",   # Multi-line docstring summary should start at the first line
+  "D417",   # require documentation for every function parameter.
+  "D401",   # require an imperative mood for all docstrings.
+  "PTH123", # Path.open should be used instead of built-in open
+  "PT006",  # Pytest parameterize style
+  "N812",   # Lowercase `functional` imported as non-lowercase `F` (import torch.nn.functional as F)
+  "NPY002", # legacy numpy random
+  "UP017",  # datetime.timezone.utc -> datetime.UTC
+  "SIM108", # use ternary operator instead of if-else
 ]
 
 [tool.ruff.lint.pydocstyle]
@@ -129,9 +136,7 @@ max-line-length = 120
 known-third-party = ["wandb"]
 
 ## Uncomment this if you want to use Python < 3.10
-required-imports = [
-  "from __future__ import annotations",
-]
+required-imports = ["from __future__ import annotations"]
 
 [tool.ruff.lint.flake8-tidy-imports]
 # Ban certain modules from being imported at module level, instead requiring
