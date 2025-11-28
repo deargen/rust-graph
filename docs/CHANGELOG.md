@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.2] - 2025-11-28
+### :construction_worker: Build System
+- [`bae73f2`](https://github.com/deargen/rust-graph/commit/bae73f2f5ae9200a97bfc7c31541765cd71536dc) - workflow version up *(commit by [@kiyoon](https://github.com/kiyoon))*
+- [`c9711bf`](https://github.com/deargen/rust-graph/commit/c9711bfb633076c04186d9a31b8b751048f28d3e) - maturin 1.8 pyo3 0.24 *(commit by [@kiyoon](https://github.com/kiyoon))*
+- [`2442768`](https://github.com/deargen/rust-graph/commit/2442768751c51da171b55cb2ab7a9c3940576594) - python 3.14 *(commit by [@kiyoon](https://github.com/kiyoon))*
+- [`3c6b26f`](https://github.com/deargen/rust-graph/commit/3c6b26f75ac53c97dad92625704bff028b0ead4d) - fix x86 Windows *(commit by [@kiyoon](https://github.com/kiyoon))*
+
+### :wrench: Chores
+- [`f038b81`](https://github.com/deargen/rust-graph/commit/f038b811fd14ce6e4b9a9d35fb8cb4c6492d33eb) - update python classifier *(commit by [@kiyoon](https://github.com/kiyoon))*
+
+
 ## [v0.1.1] - 2025-02-27
 ### :sparkles: New Features
 - [`4b63c8d`](https://github.com/deargen/rust-graph/commit/4b63c8d3794c30525ac7c1a806a63a7abce182fa) - fix lint, make __version__ *(commit by [@kiyoon](https://github.com/kiyoon))*
@@ -40,3 +51,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [v0.1.0]: https://github.com/deargen/rust-graph/compare/v0.0.0...v0.1.0
 [v0.1.1]: https://github.com/deargen/rust-graph/compare/v0.1.0...v0.1.1
+[v0.1.2]: https://github.com/deargen/rust-graph/compare/v0.1.1...v0.1.2
