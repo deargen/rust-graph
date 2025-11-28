@@ -12,5 +12,8 @@ pyo3 = "0.27.1"
 rayon = "1.10"
 
 [features]
-extension-module = ["pyo3/extension-module"]
+extension-module = [
+  "pyo3/extension-module",
+  "pyo3/generate-import-lib", # For Windows x86
+]
 default = ["extension-module"]
