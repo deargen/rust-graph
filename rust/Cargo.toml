@@ -8,7 +8,7 @@ name = "rust_graph"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-pyo3 = "0.24.0"
+pyo3 = "0.27.1"
 rayon = "1.10"
 
 [features]
