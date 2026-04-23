@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "rust-graph"
-requires-python = ">=3.8,<4"
+requires-python = ">=3.9,<4"
 description = "Simple and fast graph operations written in Rust" # OPTIONALLY CHANGE
 authors = [
   { name = "Kiyoon Kim" }, # OPTIONALLY CHANGE
@@ -49,7 +49,7 @@ typeCheckingMode = "standard"
 useLibraryCodeForTypes = true
 autoImportCompletions = true
 
-pythonVersion = "3.8"
+pythonVersion = "3.9"
 # pythonPlatform = "Linux"
 
 [tool.maturin]
